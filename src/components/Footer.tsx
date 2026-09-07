@@ -1,7 +1,7 @@
 export function Footer({
   onNavigate,
 }: {
-  onNavigate: (view: 'gallery' | 'docs' | 'playground') => void
+  onNavigate: (view: "gallery" | "docs" | "playground") => void;
 }) {
   return (
     <footer className="border-t border-border">
@@ -25,17 +25,26 @@ export function Footer({
             </p>
             <ul className="space-y-1.5 text-sm">
               <li>
-                <button onClick={() => onNavigate('gallery')} className="text-ink-soft hover:text-ink">
+                <button
+                  onClick={() => onNavigate("gallery")}
+                  className="text-ink-soft hover:text-ink"
+                >
                   Browse hooks
                 </button>
               </li>
               <li>
-                <button onClick={() => onNavigate('playground')} className="text-ink-soft hover:text-ink">
+                <button
+                  onClick={() => onNavigate("playground")}
+                  className="text-ink-soft hover:text-ink"
+                >
                   Playground
                 </button>
               </li>
               <li>
-                <button onClick={() => onNavigate('docs')} className="text-ink-soft hover:text-ink">
+                <button
+                  onClick={() => onNavigate("docs")}
+                  className="text-ink-soft hover:text-ink"
+                >
                   Documentation
                 </button>
               </li>
@@ -49,7 +58,7 @@ export function Footer({
             <ul className="space-y-1.5 text-sm">
               <li>
                 <a
-                  href="https://github.com/byllzz/hookstash"
+                  href="https://github.com/bilalmlkdev/hookstash"
                   target="_blank"
                   rel="noreferrer"
                   className="text-ink-soft hover:text-ink"
@@ -59,7 +68,7 @@ export function Footer({
               </li>
               <li>
                 <a
-                  href="https://github.com/byllzz/hookstash/blob/main/LICENSE"
+                  href="https://github.com/bilalmlkdev/hookstash/blob/main/LICENSE"
                   target="_blank"
                   rel="noreferrer"
                   className="text-ink-soft hover:text-ink"
@@ -87,12 +96,12 @@ export function Footer({
               </li>
               <li>
                 <a
-                  href="https://github.com/byllzz"
+                  href="https://github.com/bilalmlkdev"
                   target="_blank"
                   rel="noreferrer"
                   className="text-ink-soft hover:text-ink"
                 >
-                  @byllzz
+                  @bilalmlkdev
                 </a>
               </li>
             </ul>
@@ -105,5 +114,5 @@ export function Footer({
         </div>
       </div>
     </footer>
-  )
+  );
 }

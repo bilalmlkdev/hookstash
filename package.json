@@ -4,11 +4,11 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "author": "Bilal (@byllzz)",
+  "author": "Bilal (@bilalmlkdev)",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/byllzz/hookstash"
+    "url": "https://github.com/bilalmlkdev/hookstash"
   },
   "keywords": [
     "react",
