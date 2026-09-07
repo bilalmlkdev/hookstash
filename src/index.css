@@ -39,6 +39,10 @@
   html {
     background: var(--color-canvas);
     color-scheme: light;
+    scrollbar-width: none;
+  }
+  ::-webkit-scrollbar {
+    display: none;
   }
   html.dark {
     color-scheme: dark;

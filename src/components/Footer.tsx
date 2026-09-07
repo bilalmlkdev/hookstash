@@ -3,14 +3,19 @@
 import { HugeiconsIcon } from "@hugeicons/react";
 import { GithubIcon, NewTwitterIcon } from "@hugeicons/core-free-icons";
 
-export function Footer() {
+
+type FooterProps = {
+  onNavigate?: (view: "docs" | "playground" | "gallery") => void;
+};
+
+export function Footer({ onNavigate }: FooterProps) {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
     <footer className="relative">
-      <div className="mx-auto max-w-6xl px-2 lg:border-x dark:bg-[radial-gradient(35%_80%_at_15%_0%,--color-canvas (--color-canvas/.1),transparent)]">
+      <div className="mx-auto max-w-6xl px-2 lg:border-x dark:bg-[radial-gradient(35%_80%_at_15%_0%,--color-ink/.1,transparent)]">
         <div className="absolute inset-x-0 h-px w-full bg-border" />
         <div className="grid max-w-5xl grid-cols-6 gap-6 p-4">
           <div className="col-span-6 flex flex-col gap-4 pt-5 md:col-span-4">
@@ -44,7 +49,7 @@ export function Footer() {
                 onClick={() =>
                   window.open("https://x.com/bilalmlkdev", "_blank")
                 }
-                className="inline-flex h-8 w-8 items-center justify-center rounded-lg border border-border text-ink-soft hover:border-border-strong hover:text-ink"
+                className="inline-flex h-8 w-8 items-center justify-center rounded-lg border border-border text-ink-soft transition-colors hover:border-border-strong hover:text-ink"
               >
                 <HugeiconsIcon icon={NewTwitterIcon} className="h-4 w-4" />
               </button>
@@ -54,7 +59,7 @@ export function Footer() {
                 onClick={() =>
                   window.open("https://github.com/bilalmlkdev", "_blank")
                 }
-                className="inline-flex h-8 w-8 items-center justify-center rounded-lg border border-border text-ink-soft hover:border-border-strong hover:text-ink"
+                className="inline-flex h-8 w-8 items-center justify-center rounded-lg border border-border text-ink-soft transition-colors hover:border-border-strong hover:text-ink"
               >
                 <HugeiconsIcon icon={GithubIcon} className="h-4 w-4" />
               </button>
@@ -64,8 +69,22 @@ export function Footer() {
           <div className="col-span-3 w-full md:col-span-1">
             <span className="text-ink-faint text-xs">Resources</span>
             <div className="mt-2 flex flex-col gap-2">
-              <span className="text-ink-soft text-xs">Documentation</span>
-              <span className="text-ink-soft text-xs">Playground</span>
+              {onNavigate && (
+                <>
+                  <button
+                    onClick={() => onNavigate("docs")}
+                    className="text-ink-soft text-xs hover:text-ink text-left"
+                  >
+                    Documentation
+                  </button>
+                  <button
+                    onClick={() => onNavigate("playground")}
+                    className="text-ink-soft text-xs hover:text-ink text-left"
+                  >
+                    Playground
+                  </button>
+                </>
+              )}
               <a
                 href="https://github.com/bilalmlkdev/hookstash"
                 target="_blank"
