@@ -24,7 +24,7 @@ export function ThemeToggle({
       <button
         onClick={() => setOpen((v) => !v)}
         aria-label="Change theme"
-        className="flex h-8 px-4 items-center justify-center rounded border border-border text-ink-soft transition-colors hover:border-border-strong hover:text-ink"
+        className="flex h-8 px-4 items-center justify-center rounded border border-border text-ink-soft rounded-lg transition-colors hover:border-border-strong hover:text-ink"
       >
         {/* Text-only trigger */}
         <span className="text-xs font-medium">{current.label}</span>
