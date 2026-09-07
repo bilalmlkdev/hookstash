@@ -63,7 +63,7 @@ export function TopNav({
           </span>{" "}
         </button>
 
-        <nav className="hidden items-center gap-5 md:flex">
+        <nav className="hidden items-center gap-5 md:flex relative top-0.5">
           <NavLink
             active={view === "gallery" || view === "detail"}
             onClick={onGoHome}
